@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список продуктов</title>
+</head>
+<body>
+    <h1>Список продуктов</h1>
+    {% for prod in products %}
+        <h2>{{ prod.name }}</h2>
+        <p>{{ prod.description }}</p>
+        <h3>{{ prod.price }}</h3>
+        <p>-----------------------</p>
+    {% endfor %}
+
+    <a href="{% url 'index' %}"><button>На главную</button></a>
+</body>
+</html>
